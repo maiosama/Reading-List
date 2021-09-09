@@ -8,8 +8,8 @@ let crud = 	new function (){
 			for(i =0; i<this.bookList.length; i++){
 				bookData+= '<tr>';
 				bookData+='<td>' +(i+1)+'. '+ this.bookList[i]+'</td>';
-				bookData+='<td><button onclick="crud.edit(' + i + ')"  class="btn btn-warning">Edit</button></td>';
-				bookData+='<td><button onclick="crud.read(' + i + ')"  class="btn btn-danger">Read</button></td>';
+				bookData+='<td><button onclick="crud.edit(' + i + ')"  class="btn">Edit</button></td>';
+				bookData+='<td><button onclick="crud.read(' + i + ')"  class="btn">Read</button></td>';
 				bookData+='</tr>';
 	
 			}
