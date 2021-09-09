@@ -1,0 +1,92 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    background-image: url("Books.jpg");
+    background-repeat:no-repeat;
+    min-width:100%;
+    max-height: fit-content;
+    font-family: "Roboto", sans-serif;
+    --text-color: #333;
+    color: var(--text-color);  
+    
+}
+.container {
+    text-align: center;
+    width: 40%;
+    margin: auto;
+    color: #181818;
+    min-height: 90vh;
+    margin-top: 2%;
+  }
+  h1 {
+    margin-bottom: 20px;
+    font-size: 6vw;
+    margin-top: 0;
+    padding-left: 10px;
+  }
+  p{
+    margin-bottom: 20px;
+    font-size: 3vw;
+    margin-top: 0;
+    padding-left: 10px;
+
+
+  }
+  input {
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    color: #310202;
+    padding: 8px;
+    font-size: 2vw;
+  }
+  #submitButton{
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 50%;
+    color: #310202;
+    font-size: 2vw;
+    border: #88202073;
+    background-color: #31020269;
+  }
+  .reading {
+    width: 100%;
+    padding-bottom: 15px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    color: #000000;
+  }
+h3{
+  font-size: 3vw;
+
+}  
+#book {
+    padding: 0 10px 0 10px;
+  }
+  td{
+    font-size: 2vw;
+    padding-right: 10px;
+    margin: auto;
+    text-align: left;
+    
+}
+#edit-box{
+  display: none;
+  max-width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+.btn{
+  padding: 5px;
+  margin: auto;
+  border-radius: 50%;
+  color: #310202;
+  font-size: 3vw;
+  border: #88202073;
+  background-color: #31020269;
+
+}
+
+  
+    

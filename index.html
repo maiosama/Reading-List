@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"/>
+    
+    <title>Reading List</title>
+</head>
+<body>
+    <div class="container">
+        <div class="reading">
+            <h1>Reading List</h1>
+            <p>What is the book you are reading now?</p>
+            <form action="javascript:void(0);" method="POST" onsubmit="crud.addBook()">
+                <input type="text" id="title" placeholder="Book Title"/>
+                <input type="submit" id="submitButton" value="Add Book" />
+            </form>
+
+        <table>
+            <tr class="reading-list">
+                <th><h3>Book Name</h3></th>
+            </tr>
+            <tbody id="book">
+            </tbody>
+        </table>
+
+        <div id="edit-box" >
+            <form action="javascript:void(0);" method="POST" id="edit">
+              <input type="text" id="read-book">
+              <input type="submit" value="Close" /> <a onclick="closeInput()">&#10006;</a>
+            </form>
+          </div>
+        
+    
+
+    <script src="index.js"></script>
+</body>
+</html>
