@@ -4,7 +4,7 @@ html,body{
     background-image: url("Books.jpg");
     background-repeat:no-repeat;
     min-width:100%;
-    max-height: fit-content;
+    /* max-height: fit-content; */
     font-family: "Roboto", sans-serif;
     --text-color: #333;
     color: var(--text-color);  
@@ -12,7 +12,7 @@ html,body{
 }
 .container {
     text-align: center;
-    width: 40%;
+    width: 55%;
     margin: auto;
     color: #181818;
     min-height: 90vh;
@@ -20,13 +20,14 @@ html,body{
   }
   h1 {
     margin-bottom: 20px;
-    font-size: 6vw;
+    font-size: 80px;
     margin-top: 0;
     padding-left: 10px;
+    
   }
   p{
     margin-bottom: 20px;
-    font-size: 3vw;
+    font-size: 30px;
     margin-top: 0;
     padding-left: 10px;
 
@@ -39,33 +40,34 @@ html,body{
     border-bottom: 2px solid #ffffff;
     color: #310202;
     padding: 8px;
-    font-size: 2vw;
+    font-size: 25px;
   }
   #submitButton{
     padding: 10px;
     margin-top: 15px;
     border-radius: 50%;
     color: #310202;
-    font-size: 2vw;
+    font-size: 20px;
     border: #88202073;
     background-color: #31020269;
   }
   .reading {
     width: 100%;
+    margin: auto;
     padding-bottom: 15px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     color: #000000;
   }
 h3{
-  font-size: 3vw;
+  font-size: 25px;
 
 }  
 #book {
     padding: 0 10px 0 10px;
   }
   td{
-    font-size: 2vw;
+    font-size: 30px;
     padding-right: 10px;
     margin: auto;
     text-align: left;
@@ -82,11 +84,116 @@ h3{
   margin: auto;
   border-radius: 50%;
   color: #310202;
-  font-size: 3vw;
+  font-size: 20px;
   border: #88202073;
   background-color: #31020269;
 
 }
 
+@media only screen and (max-width: 1300px){
+  /*Tablets [601px -> 1200px]*/
+  body{
+    background-image: url("Boooks.jpg");
+    background-repeat:repeat-y;
+  }
+  h1{
+    font-size: 60px;
+  }
+  p{
+    font-size: 35px;
+  }
+  #submitButton{
+    font-size: 25px;
+    background-color: #c9eba3;
+  }
+  h3{
+    font-size: 35px;
   
+  }  
+  
+  td{
+    font-size: 40px;
+  }
+  .btn{
+    font-size: 25px;
+    background-color: #c9eba3;
+
+  }
+  input{
+    font-size: 35px;
+  }
+
+
+}
+@media only screen and (max-width: 600px){
+/*Big smartphones [426px -> 600px]*/
+body{
+  background-image: url("Booooks.jpg");
+  background-repeat: repeat;
+}
+h1{
+  font-size: 50px;
+}
+p{
+  font-size: 20px;
+}
+#submitButton{
+  font-size: 15px;
+  background-color: #31020269;
+
+}
+h3{
+  font-size: 20px;
+
+}  
+
+td{
+  font-size: 20px;
+}
+.btn{
+  font-size: 15px;
+  background-color: #31020269;
+
+}
+input{
+  font-size: 20px;
+}
+
+
+}
+@media only screen and (max-width: 425px){
+/*Small smartphones [325px -> 425px]*/
+body{
+  background-image: url("Booooks.jpg");
+  background-repeat: repeat;
+}
+.container{
+  width: 60%;
+}
+h1{
+  font-size: 30px;
+}
+p{
+  font-size: 20px;
+}
+#submitButton{
+  font-size: 15px;
+}
+h3{
+  font-size: 20px;
+
+}  
+
+td{
+  font-size: 18px;
+}
+.btn{
+  font-size: 15px;
+}
+input{
+  font-size: 20px;
+}
+
+}
+
     
