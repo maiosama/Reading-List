@@ -1,22 +1,24 @@
 let crud = 	new function (){
 	this.readList = document.getElementById("book");
-	this.bookList = [];
-
+	// this.bookList=[]
+	this.bookList=JSON.parse(localStorage.getItem('bookList')) ||[]
+	
 	this.fetchAll = function(){
-		var bookData = '';
+		var view = '';
+		var list =localStorage.getItem("bookList");
+		bookData= JSON.parse(list)
+		console.log("fetch", bookData)
 		if(this.bookList.length>0){
 			for(i =0; i<this.bookList.length; i++){
-				bookData+= '<tr>';
-				bookData+='<td>' +(i+1)+'. '+ this.bookList[i]+'</td>';
-				bookData+='<td><button onclick="crud.edit(' + i + ')"  class="btn">Edit</button></td>';
-				bookData+='<td><button onclick="crud.read(' + i + ')"  class="btn">Read</button></td>';
-				bookData+='</tr>';
-	
+				view+= '<tr>';
+				view+='<td>' +(i+1)+'. '+ this.bookList[i]+'</td>';
+				view+='<td><button onclick="crud.edit(' + i + ')"  class="btn btn-warning">Edit</button></td>';
+				view+='<td><button onclick="crud.read(' + i + ')"  class="btn btn-danger">Read</button></td>';
+				view+='</tr>';
 			}
 		}
-		localStorage.getItem("bookData")
-		return this.readList.innerHTML=bookData;
-
+		
+		return this.readList.innerHTML=view;
 	}
 
 	this.addBook = function(){
@@ -24,9 +26,11 @@ let crud = 	new function (){
 		let book=item.value;
 
 		if(book){
+			console.log(this.bookList)
 			this.bookList.push(book.trim());
 			item.value='';
-			localStorage.setItem("bookData", JSON.stringify(this.bookList))
+			console.log(localStorage)
+			localStorage.setItem("bookList", JSON.stringify(this.bookList));
 			this.fetchAll();
 		}
 	};
@@ -41,20 +45,31 @@ let crud = 	new function (){
 			var read = book.value;
 			if(read){
 				self.bookList.splice(item, 1, read.trim());
+				localStorage.setItem("bookList", JSON.stringify(self.bookList));
 				self.fetchAll();
 				closeInput();
 			}
 		}
-
-
 	};
 
 	this.read= function(item){
 		this.bookList.splice(item, 1);
+		localStorage.setItem('bookList', JSON.stringify(this.bookList))
 		this.fetchAll();
 	}
-	
 
+	this.search = function(){
+		let input= document.getElementById("search");
+		inputVlue = input.value;
+		console.log(inputVlue)
+		if(inputVlue){
+			let searchResult= document.getElementsByClassName("result");
+			const res= this.bookList.includes(inputValue)
+			console.log(res)
+			this.fetchAll();
+			return searchResult.innerHTML=res	
+		}	
+	}	
 }
 
 crud.fetchAll();
