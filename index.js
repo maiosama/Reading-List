@@ -60,7 +60,7 @@ let crud = 	new function (){
 
 	this.search = function(){
 		let input= document.getElementById("search");
-		let searchResult= document.getElementsByClassName("result");
+		let searchResult= document.getElementById("result");
 
 		inputValue = input.value;
 		console.log(inputValue)
