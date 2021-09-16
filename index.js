@@ -60,15 +60,16 @@ let crud = 	new function (){
 
 	this.search = function(){
 		let input= document.getElementById("search");
-		inputVlue = input.value;
-		console.log(inputVlue)
-		if(inputVlue){
-			let searchResult= document.getElementsByClassName("result");
-			const res= this.bookList.includes(inputValue)
-			console.log(res)
-			this.fetchAll();
-			return searchResult.innerHTML=res	
-		}	
+		let searchResult= document.getElementsByClassName("result");
+
+		inputValue = input.value;
+		console.log(inputValue)
+		for (i=0; i<this.bookList.length; i++){
+			if(this.bookList[i].match(inputValue))
+			return searchResult.innerHTML=this.bookList[i]
+		}
+
+		
 	}	
 }
 
