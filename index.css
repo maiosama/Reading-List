@@ -50,6 +50,7 @@ html,body{
     font-size: 20px;
     border: #88202073;
     background-color: #31020269;
+    cursor: pointer;
   }
   .reading {
     width: 100%;
@@ -87,7 +88,7 @@ h3{
   font-size: 20px;
   border: #88202073;
   background-color: #31020269;
-
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 1300px){
@@ -105,6 +106,7 @@ h3{
   #submitButton{
     font-size: 25px;
     background-color: #c9eba3;
+    cursor: pointer;
   }
   h3{
     font-size: 35px;
@@ -117,6 +119,7 @@ h3{
   .btn{
     font-size: 25px;
     background-color: #c9eba3;
+    cursor: pointer;
 
   }
   input{
@@ -140,7 +143,7 @@ p{
 #submitButton{
   font-size: 15px;
   background-color: #31020269;
-
+  cursor: pointer;
 }
 h3{
   font-size: 20px;
@@ -153,6 +156,7 @@ td{
 .btn{
   font-size: 15px;
   background-color: #31020269;
+  cursor: pointer;
 
 }
 input{
@@ -178,6 +182,8 @@ p{
 }
 #submitButton{
   font-size: 15px;
+  cursor: pointer;
+
 }
 h3{
   font-size: 20px;
@@ -189,6 +195,7 @@ td{
 }
 .btn{
   font-size: 15px;
+  cursor: pointer;
 }
 input{
   font-size: 20px;
