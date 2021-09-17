@@ -38,14 +38,15 @@
           <br/>
           <br/>
 
-          <div>
+           <div>
               <form >
-                  <input action="javascript:void(0);" type="search" method="GET" id="search" placeholder="search for a book" />
-                  <input type="submit" value="search" onclick="crud.search()" class="btn"/>
+                  <input action="javascript:void(0);" type="search" onkeyup="crud.search(event)" method="GET" id="search" placeholder="search for a book" />
+                  <input type="button" value="search" onclick="crud.search()" class="btn"/>
               </form>
               <div id="result">
 
               </div>
+
           </div>
         
     
