@@ -90,6 +90,14 @@ h3{
   background-color: #31020269;
   cursor: pointer;
 }
+#result{
+  font-size: 30px;
+  padding-right: 10px;
+  margin: auto;
+  text-align: center;
+  padding-top: 15px;
+
+}
 
 @media only screen and (max-width: 1300px){
   /*Tablets [601px -> 1200px]*/
@@ -123,6 +131,9 @@ h3{
 
   }
   input{
+    font-size: 35px;
+  }
+  #result{
     font-size: 35px;
   }
 
@@ -162,7 +173,7 @@ td{
 input{
   font-size: 20px;
 }
-.result{
+#result{
   font-size: 20px;
 }
 
@@ -203,7 +214,10 @@ td{
 input{
   font-size: 20px;
 }
+#result{
+  font-size: 20px;
+}
 
 }
 
-        
+    
