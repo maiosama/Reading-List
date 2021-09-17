@@ -12,8 +12,8 @@ let crud = 	new function (){
 			for(i =0; i<this.bookList.length; i++){
 				view+= '<tr>';
 				view+='<td>' +(i+1)+'. '+ this.bookList[i]+'</td>';
-				view+='<td><button onclick="crud.edit(' + i + ')"  class="btn btn-warning">Edit</button></td>';
-				view+='<td><button onclick="crud.read(' + i + ')"  class="btn btn-danger">Read</button></td>';
+				view+='<td><button onclick="crud.edit(' + i + ')"  class="btn">Edit</button></td>';
+				view+='<td><button onclick="crud.read(' + i + ')"  class="btn">Read</button></td>';
 				view+='</tr>';
 			}
 		}
@@ -58,20 +58,43 @@ let crud = 	new function (){
 		this.fetchAll();
 	}
 
-	this.search = function(){
-		let input= document.getElementById("search");
-		let searchResult= document.getElementById("result");
 
-		inputValue = input.value;
-		console.log(inputValue)
-		for (i=0; i<this.bookList.length; i++){
-			if(this.bookList[i].match(inputValue))
-			return searchResult.innerHTML=this.bookList[i]
+	this.search = function(event){
+		
+
+		let view = ''; 
+        for(i=0 ; i < this.bookList.length ; i++){
+			if(this.bookList[i].toLowerCase().includes(event.key)){
+				
+				view+=`
+				<tr>
+				<td>${i+1}. ${this.bookList[i]} </td>
+				<td><button onclick="crud.edit(${i})" class="btn">Edit</button></td>
+				<td><button onclick="crud.read(${i})"  class="btn">Read</button></td>
+				</tr>
+				`
+
+			}
+
+    	}
+		if(document.getElementById("search").value == '')
+		{
+			for(i=0 ; i < this.bookList.length ; i++){
+					
+				view+=`
+				<tr>
+				<td>${i+1}. ${this.bookList[i]} </td>
+				<td><button onclick="crud.edit(${i})" class="btn">Edit</button></td>
+				<td><button onclick="crud.read(${i})"  class="btn">Read</button></td>
+				</tr>
+				`
+	
+			}
+			
 		}
 
-		
-	}	
-}
+    	return this.readList.innerHTML=view;
+	}}
 
 crud.fetchAll();
 
